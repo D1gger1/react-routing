@@ -1,11 +1,11 @@
-import { Link } from "react-router-dom";
-export default function OfficeChairs() {
-    return (
-        <div>
-            <header>
-                <h1>OfficeChairs</h1>
-                <Link to='/Cart'>Cart</Link>
-            </header>
-        </div>
-    );
+import { ProductList } from "../components/ProductsList";
+
+
+export default function Home() {
+  return (
+    <div>
+      <h1>Каталог товаров</h1>
+      <ProductList />
+    </div>
+  );
 }
