@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
-
+import { ProductCard } from "./ProductCard"
 
 export const ProductList = () => {
   const [products, setProduct] = useState([]);
@@ -34,15 +34,10 @@ export const ProductList = () => {
   if (error) return <p style={{ color: 'red' }}>{error}</p>
 
   return (
-    <div className='product-list'>
+    <div className="product-list">
       {products.map(product => (
-        <div className='product-card'>
-          <img src={product.thumbnail} alt={product.title} />
-          <h3>{product.title}</h3>
-          <p>{product.description}</p>
-          <strong>${product.price}</strong>
-        </div>
+        <ProductCard key={product.id} product={product} />
       ))}
     </div>
-  )
+  );
 }
