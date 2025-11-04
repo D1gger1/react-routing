@@ -14,11 +14,13 @@ export const Header = () => {
     return (
         <header className={styles.header}>
             <div>
+                <Link to='/' className={styles.logo}>
                     <img src={headerLogoLeft} alt="Header Left" className={styles.headerLogoLeft} />
                     <img src={headerLogoRight} alt="Header Right" className={styles.headerLogoRight} />
-                <h1 className={styles.title}>
-                    OnlineStore
-                </h1>
+                    <h1 className={styles.title}>
+                        OnlineStore
+                    </h1>
+                </Link>
             </div>
             <nav>
                 <Link to='/Cart' className={styles.cart}>

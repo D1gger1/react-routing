@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { ProductCard } from "./ProductCard"
+import styles from './ProductList.module.css';
 
 export const ProductList = () => {
   const [products, setProduct] = useState([]);
@@ -34,7 +35,7 @@ export const ProductList = () => {
   if (error) return <p style={{ color: 'red' }}>{error}</p>
 
   return (
-    <div className="product-list">
+    <div className={styles.productList}>
       {products.map(product => (
         <ProductCard key={product.id} product={product} />
       ))}
