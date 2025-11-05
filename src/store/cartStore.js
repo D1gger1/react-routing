@@ -1,17 +1,43 @@
-import { create } from 'zustand';
+import { create } from "zustand";
 
 export const useCartStore = create((set) => ({
-  cartItems: [], 
+  cart: [],
 
   addToCart: (product) =>
-    set((state) => ({
-      cartItems: [...state.cartItems, product],
-    })),
+    set((state) => {
+      const exists = state.cartItems.find((item) => item.id === product.id);
+      if (exists) {
+        return {
+          cartItems: state.cartItems.map((item) =>
+            item.id === product.id
+              ? { item, quantity: item.quantity + 1 }
+              : item
+          )
+        };
+      }
 
+      return {
+        cartItems: [...state.cartItems, { ...product, quantity: 1 }],
+      };
+    }),
   removeFromCart: (id) =>
     set((state) => ({
       cartItems: state.cartItems.filter((item) => item.id !== id),
     })),
-
-  clearCart: () => set({ cartItems: [] }),
-}));
+  increaseQuantity: (id) =>
+    set((state) => ({
+      cartItems: state.cartItems.map((items) =>
+        items.id === id
+          ? { ...items, quantity: items.quantity + 1 }
+          : items
+      ),
+    })),
+  decreaseQuantity: (id) =>
+    set((state) => ({
+      cartItems: state.cartItems.map((items) =>
+        item.id === id && items.quantity > 1
+          ? { ...items, quantity: items.quantity - 1 }
+          : items
+      ),
+    }))
+}))
