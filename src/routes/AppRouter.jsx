@@ -6,10 +6,10 @@ import {
 } from "react-router-dom";
 
 import Home from '../pages/Home'
-import Cart from '../pages/Cart'
-import Step1 from '../pages/checkout/Step1'
-import Step2 from '../pages/checkout/Step2'
-import Step3 from '../pages/checkout/Step3'
+import Cart from '../pages/checkout/Cart'
+import ContactInformation from '../pages/checkout/ContactInformation'
+import ShipmentInformation from '../pages/checkout/ShipmentInformation'
+import FinallOrder from '../pages/FinnalOrder'
 
 export default function AppRouter() {
     return (
@@ -20,9 +20,9 @@ export default function AppRouter() {
             {/*Cart*/}
             <Route path="/Cart" element={<Cart />} />
             {/*Multi-step form registration */}
-            <Route path="/checkout/step-1" element={<Step1 />} />
-            <Route path="/checkout/step-2" element={<Step2 />} />
-            <Route path="/checkout/step-3" element={<Step3 />} />
+            <Route path="/checkout/ContactInformation" element={<ContactInformation />} />
+            <Route path="/checkout/ShipmentInformation" element={<ShipmentInformation />} />
+            <Route path="/checkout/FinallOrder" element={<FinallOrder />} />
 
             {/*NotFoundPage*/}
             <Route path="*" element={<Navigate to='/' />} />
