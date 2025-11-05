@@ -13,9 +13,7 @@ export const ProductList = () => {
     const fetchAll = async () => {
       try {
         const urls = [
-          'https://dummyjson.com/products/category/furniture',
-          'https://dummyjson.com/products/category/home-decoration',
-          'https://dummyjson.com/products/category/lighting',
+          'https://dummyjson.com/products/category/groceries',
         ];
         const responses = await Promise.all(urls.map(url => axios.get(url)));
         const data = responses.map(res => res.data.products);

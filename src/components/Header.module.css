@@ -50,3 +50,18 @@
     height: 16px;
     margin-right: 10px;
 }
+
+.cartCount {
+    background-color: rgba(233, 237, 8, 1);
+    border-radius: 50%;
+    color: black;
+    font-size: 12px;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 16px;
+    right: 75px;
+}

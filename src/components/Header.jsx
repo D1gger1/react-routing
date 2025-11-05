@@ -27,7 +27,7 @@ export const Header = () => {
                     <img src={cartLogo} alt="Cart" className={styles.cartLogo} />
                     Cart
                     {totalCount > 0 && (
-                        <span> ({totalCount})</span>
+                        <span className={styles.cartCount}> {totalCount}</span>
                     )}
                 </Link>
             </nav>
