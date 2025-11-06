@@ -1,6 +1,7 @@
 import React from "react";
 import { useCartStore } from "../../store/cartStore";
 import { useNavigate } from "react-router-dom";
+import Breadcrumb from "../../components/Breadcrumb";
 import styles from './Cart.module.css';
 import deleteImg from '../../assets/deleteImg.png';
 
@@ -28,10 +29,7 @@ export default function Cart() {
 
   return (
     <div className={styles.cart}>
-      <div className={styles.steps}>
-        <span className={styles.active}>Cart</span> &gt;
-        <span>Contact Info</span> &gt; <span>Shipment Information</span>
-      </div>
+      <Breadcrumb />
 
       <h2 className={styles.titleCart}>Cart</h2>
       {cartItems.length === 0 ? (

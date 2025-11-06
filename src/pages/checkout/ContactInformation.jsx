@@ -1,6 +1,7 @@
 import React from "react";
 import { useFormik } from "formik";
 import { useNavigate } from "react-router-dom";
+import Breadcrumb from "../../components/Breadcrumb";
 import styles from "./ContactInformation.module.css"
 
 export default function ContactInformation() {
@@ -44,11 +45,7 @@ export default function ContactInformation() {
 
   return (
     <div className={styles.contact}>
-      <div className={styles.breadcrumbs}>
-        <span>Cart</span> &gt;
-        <span>Contact Information</span> &gt;
-        <span>Shipment Information</span>
-      </div>
+      <Breadcrumb />
       <h1>Contact Information</h1>
 
       <form action="" onSubmit={formik.handleSubmit} className={styles.form}>
