@@ -33,6 +33,24 @@
 
 }
 
+.empty{
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.backBtn{
+    margin-top: 10px;
+    height: 36px;
+    width: 150px;
+    border: none;
+    color: white;
+    border-radius: 8px;
+    background-color:rgba(0, 174, 28, 1) ;
+    cursor: pointer;
+}
+
 .list {
     max-height: 640px;
     width: 100%;

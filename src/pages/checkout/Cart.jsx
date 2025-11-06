@@ -27,6 +27,10 @@ export default function Cart() {
     navigate('/checkout/ContactInformation');
   }
 
+  const handleBackToHome = () =>{
+    navigate('/');
+  }
+
   return (
     <div className={styles.cart}>
       <div className={styles.breadcrumb}>
@@ -35,7 +39,9 @@ export default function Cart() {
 
       <h2 className={styles.titleCart}>Cart</h2>
       {cartItems.length === 0 ? (
-        <p>Your cart is empty.</p>
+        <p className={styles.empty}>Your cart is empty.
+        <button onClick={handleBackToHome} className={styles.backBtn}>Back to Store</button>
+        </p>
       ) : (
         <>
           <ul className={styles.list}>
