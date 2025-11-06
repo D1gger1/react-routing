@@ -6,7 +6,7 @@ export default function Breadcrumb() {
   const location = useLocation();
 
   const steps = [
-    { path: "/checkout/Cart", label: "Cart" },
+    { path: "/Cart", label: "Cart" },
     { path: "/checkout/ContactInformation", label: "Contact Information" },
     { path: "/checkout/ShipmentInformation", label: "Shipment Information" },
   ];

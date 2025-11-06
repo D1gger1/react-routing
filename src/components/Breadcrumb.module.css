@@ -1,0 +1,19 @@
+.link{
+    text-decoration: none;
+    color: rgba(36, 53, 115, 1);
+    
+}
+.active{
+    color: rgba(0, 174, 28, 1);
+}
+
+.link:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.link,.active{
+    font-size: 16px;
+    margin: 10px;
+    
+}
