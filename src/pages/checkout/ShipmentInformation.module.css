@@ -1,0 +1,16 @@
+.container {
+    width: 1250px;
+    margin: 0 auto;
+}
+
+.title{
+    font-size: 32px;
+    font-weight: 400;
+    color: rgba(36, 53, 115, 1);
+    margin-top: 30px;
+    margin-left: 10px;
+}
+
+.breadcrumb{
+    margin-top: 30px;
+}
