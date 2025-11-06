@@ -50,7 +50,7 @@ export default function ContactInformation() {
               placeholder="Enter your first name"
               onChange={formik.handleChange}
               value={formik.values.firstName}
-              className={styles.inputField}
+              className={`${styles.inputField} ${formik.errors.firstName ? styles.errorInput : ""}`}
             />
             {formik.errors.firstName && <div className={styles.error}>{formik.errors.firstName}</div>}
           </div>
@@ -63,7 +63,7 @@ export default function ContactInformation() {
               placeholder="Enter your last name"
               onChange={formik.handleChange}
               value={formik.values.lastName}
-              className={styles.inputField}
+              className={`${styles.inputField} ${formik.errors.lastName ? styles.errorInput : ""}`}
             />
             {formik.errors.lastName && <div className={styles.error}>{formik.errors.lastName}</div>}
           </div>
@@ -76,7 +76,7 @@ export default function ContactInformation() {
               placeholder="Enter your email"
               onChange={formik.handleChange}
               value={formik.values.email}
-              className={styles.inputField}
+              className={`${styles.inputField} ${formik.errors.email ? styles.errorInput : ""}`}
             />
             {formik.errors.email && <div className={styles.error}>{formik.errors.email}</div>}
           </div>
@@ -89,7 +89,7 @@ export default function ContactInformation() {
               placeholder="Enter your phone"
               onChange={formik.handleChange}
               value={formik.values.phone}
-              className={styles.inputField}
+              className={`${styles.inputField} ${formik.errors.phone ? styles.errorInput : ""}`}
             />
             {formik.errors.phone && <div className={styles.error}>{formik.errors.phone}</div>}
           </div>
