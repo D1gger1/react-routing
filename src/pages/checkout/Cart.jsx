@@ -29,7 +29,9 @@ export default function Cart() {
 
   return (
     <div className={styles.cart}>
-      <Breadcrumb />
+      <div className={styles.breadcrumb}>
+        <Breadcrumb />
+      </div>
 
       <h2 className={styles.titleCart}>Cart</h2>
       {cartItems.length === 0 ? (

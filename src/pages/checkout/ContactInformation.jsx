@@ -45,56 +45,68 @@ export default function ContactInformation() {
 
   return (
     <div className={styles.contact}>
-      <Breadcrumb />
-      <h1>Contact Information</h1>
-
+      <div className={styles.breadcrumb}>
+        <Breadcrumb />
+      </div>
+      <h1 className={styles.title}>Contact Information</h1>
       <form action="" onSubmit={formik.handleSubmit} className={styles.form}>
-        <label>
-          First Name*
-        </label>
-        <input type="text"
-          name="firstName"
-          placeholder="Enter your first name"
-          onChange={formik.handleChange}
-          value={formik.values.firstName}
-        />
-        {formik.errors.firstName && <div className={styles.error}>{formik.errors.firstName}</div>}
-        <label>
-          Last Name*
-        </label>
-        <input type="text"
-          name="lastName"
-          placeholder="Enter your last name"
-          onChange={formik.handleChange}
-          value={formik.values.lastName}
-        />
-        {formik.errors.lastName && <div className={styles.error}>{formik.errors.lastName}</div>}
-        <label>
-          Email*
-        </label>
-        <input type="email"
-          name="email"
-          placeholder="Enter your email"
-          onChange={formik.handleChange}
-          value={formik.values.email}
-        />
-        {formik.errors.email && <div className={styles.error}>{formik.errors.email}</div>}
-        <label>
-          Phone*
-        </label>
-        <input type="tel"
-          name="phone"
-          placeholder="Enter your phone"
-          onChange={formik.handleChange}
-          value={formik.values.phone}
-        />
-        {formik.errors.phone && <div className={styles.error}>{formik.errors.phone}</div>}
+        <div className={styles.containerForm}>
+            <div className={styles.field}>
+              <label className={styles.titleField}>First Name*</label>
+              <input
+                type="text"
+                name="firstName"
+                placeholder="Enter your first name"
+                onChange={formik.handleChange}
+                value={formik.values.firstName}
+                className={styles.inputField}
+              />
+              {formik.errors.firstName && <div className={styles.error}>{formik.errors.firstName}</div>}
+            </div>
+
+            <div className={styles.field}>
+              <label className={styles.titleField}>Last Name*</label>
+              <input
+                type="text"
+                name="lastName"
+                placeholder="Enter your last name"
+                onChange={formik.handleChange}
+                value={formik.values.lastName}
+                className={styles.inputField}
+              />
+              {formik.errors.lastName && <div className={styles.error}>{formik.errors.lastName}</div>}
+            </div>
+
+            <div className={styles.field}>
+              <label className={styles.titleField}>Email*</label>
+              <input
+                type="email"
+                name="email"
+                placeholder="Enter your email"
+                onChange={formik.handleChange}
+                value={formik.values.email}
+                className={styles.inputField}
+              />
+              {formik.errors.email && <div className={styles.error}>{formik.errors.email}</div>}
+            </div>
+
+            <div className={styles.field}>
+              <label className={styles.titleField}>Phone*</label>
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Enter your phone"
+                onChange={formik.handleChange}
+                value={formik.values.phone}
+                className={styles.inputField}
+              />
+              {formik.errors.phone && <div className={styles.error}>{formik.errors.phone}</div>}
+          </div>
+        </div>
         <button className={styles.nextStep} type="submit">
           Next Step
         </button>
       </form>
     </div>
-
-
   )
 }
