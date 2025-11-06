@@ -35,19 +35,24 @@
     width: 270px;
     height: 36px;
     color: white;
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
     border-radius: 8px;
     margin-left: 10px;
     margin-bottom: 5px;
 }
 
+.button:hover{
+    cursor: pointer;
+    border: 1px solid rgba(92, 225, 113, 1);
+}
+
+.button:active{
+    background-color: rgba(12, 213, 43, 1);
+}
+
 .addIcon{
     width: 16px;
     height: 16px;
-}
-
-.button:hover{
-    cursor: pointer;
-    background-color: rgba(0, 150, 24, 1);
 }
 
 .description{

@@ -66,3 +66,11 @@
     cursor: pointer;
     margin: 20px 10px;  
 }
+
+.nextStep:hover{
+    border: 1px solid rgba(92, 225, 113, 1);
+}
+
+.nextStep:active{
+    background-color: rgba(12, 213, 43, 1);
+}

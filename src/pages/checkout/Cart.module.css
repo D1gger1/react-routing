@@ -57,6 +57,14 @@
 
 }
 
+.backBtn:hover{
+    border: 1px solid rgba(92, 225, 113, 1);
+}
+
+.backBtn:active{
+    background-color: rgba(12, 213, 43, 1);
+}
+
 .list {
     max-height: 640px;
     width: 100%;
@@ -128,6 +136,14 @@
     font-size: 20px;
 }
 
+.decreaseButton:hover, .increaseButton:hover{
+    border: 1px solid rgba(92, 225, 113, 1);
+}
+
+.decreaseButton:active, .increaseButton:active{
+    background-color: rgba(12, 213, 43, 1);
+}
+
 .decreaseButton, .increaseButton {
     align-items: center;
     height: 36px;
@@ -140,6 +156,11 @@
     color: white;
     cursor: pointer;
     font-size: 20px;
+}
+
+.decreaseButton:disabled {
+  background-color: rgba(24, 119, 39, 1);
+
 }
 
 .removeButton {
@@ -160,6 +181,14 @@
     cursor: pointer;
     white-space: nowrap;
 
+}
+
+.removeButton:hover{
+    border: 1px solid rgba(92, 225, 113, 1);
+}
+
+.removeButton:active{
+    background-color: rgba(12, 213, 43, 1);
 }
 
 .itemImage {
@@ -192,4 +221,12 @@
     border-radius: 8px;
     color: white;
     cursor: pointer;
+}
+
+.nextButton:hover{
+    border: 1px solid rgba(92, 225, 113, 1);
+}
+
+.nextButton:active{
+    background-color: rgba(12, 213, 43, 1);
 }

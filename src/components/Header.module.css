@@ -45,6 +45,14 @@
     box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
 }
 
+.cart:hover{
+    border: 1px solid rgba(92, 225, 113, 1);
+}
+
+.cart:active{
+    background-color: rgba(12, 213, 43, 1);
+}
+
 .cartLogo {
     width: 16px;
     height: 16px;

@@ -53,7 +53,7 @@ export default function Cart() {
                   <p className={styles.description}>{item.description}</p>
                   <div className={styles.controls}>
                     <div className={styles.quantity}>
-                      <button onClick={() => decreaseQuantity(item.id)} className={styles.decreaseButton}>-</button>
+                      <button onClick={() => decreaseQuantity(item.id)} className={styles.decreaseButton} disabled={item.quantity <= 1}>-</button>
                       <strong className={styles.quantityValue}>{item.quantity}</strong>
                       <button onClick={() => increaseQuantity(item.id)} className={styles.increaseButton}>+</button>
                     </div>
