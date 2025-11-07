@@ -34,7 +34,7 @@ export default function Cart() {
   return (
     <div className={styles.cart}>
       <div className={styles.breadcrumb}>
-        <Breadcrumb />
+        <Breadcrumb currentStepIndex={0} isStepSubmitted={false} />
       </div>
 
       <h2 className={styles.titleCart}>Cart</h2>

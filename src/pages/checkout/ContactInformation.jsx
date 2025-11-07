@@ -37,7 +37,8 @@ export default function ContactInformation() {
   return (
     <div className={styles.contact}>
       <div className={styles.breadcrumb}>
-        <Breadcrumb />
+        <Breadcrumb currentStepIndex={1} isStepSubmitted={false} />
+
       </div>
       <h1 className={styles.title}>Contact Information</h1>
       <form onSubmit={formik.handleSubmit} className={styles.form}>

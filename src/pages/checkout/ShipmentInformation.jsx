@@ -6,7 +6,8 @@ export default function ShippingInformation() {
     return (
         <div className={styles.container}>
             <div className={styles.breadcrumb}>
-                <Breadcrumb />
+                <Breadcrumb currentStepIndex={2} isStepSubmitted={false} />
+
             </div>
             <h1 className={styles.title}>Shipping Information</h1>
         </div>
