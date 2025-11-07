@@ -12,7 +12,7 @@
     text-decoration: underline;
 }
 
-.link,.active{
+.link,.active,.disabled{
     font-size: 16px;
     margin: 10px;
     
