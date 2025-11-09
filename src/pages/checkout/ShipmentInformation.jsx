@@ -2,9 +2,11 @@ import React from "react";
 import Breadcrumb from "../../components/Breadcrumb";
 import { useFormik } from "formik";
 import * as Yup from "yup"
+import { useNavigate } from "react-router-dom";
 import styles from './ShipmentInformation.module.css'
 
 export default function ShipmentInformation() {
+    const navigate = useNavigate();
 
     const formik = useFormik({
         initialValues: {
@@ -25,6 +27,7 @@ export default function ShipmentInformation() {
         }),
         onSubmit: (values) => {
             console.log('Shipment Information', values);
+            navigate("/checkout/FinallOrder");
         },
     });
 
@@ -45,18 +48,18 @@ export default function ShipmentInformation() {
                             placeholder="Enter your address"
                             onChange={formik.handleChange}
                             value={formik.values.address}
-                            className={styles.inputField}
+                            className={`${styles.inputField} ${formik.errors.address ? styles.errorInput : ""}`}
                         />
-                        {formik.errors.address && <div className={styles.erros}>{formik.errors.address}</div>}
+                        {formik.errors.address && <div className={styles.errors}>{formik.errors.address}</div>}
                     </div>
 
                     <div className={styles.fieldColumn}>
                         <label className={styles.labelField}>Apartment, suite etc. (optional)</label>
                         <input type="text"
-                            name="apartament"
+                            name="apartment"
                             placeholder="Enter your apartment information"
                             onChange={formik.handleChange}
-                            value={formik.values.apartament}
+                            value={formik.values.apartment}
                             className={styles.inputField}
                         />
                     </div>
@@ -68,7 +71,7 @@ export default function ShipmentInformation() {
                             placeholder="Enter your city"
                             onChange={formik.handleChange}
                             value={formik.values.city}
-                            className={styles.inputField}
+                            className={`${styles.inputField} ${formik.errors.city ? styles.errorInput : ""}`}
                         />
                         {formik.errors.city && <div className={styles.errors}>{formik.errors.city}</div>}
 
@@ -80,7 +83,7 @@ export default function ShipmentInformation() {
                                 name="country"
                                 onChange={formik.handleChange}
                                 value={formik.values.country}
-                                className={styles.inputFieldRow}
+                                className={`${styles.inputFieldRow} ${formik.errors.country ? styles.errorInput : ""}`}
                             >
                                 <option value="">Select your country/region</option>
                                 <option value="DE">Germany</option>
@@ -98,7 +101,7 @@ export default function ShipmentInformation() {
                                 name="state"
                                 onChange={formik.handleChange}
                                 value={formik.values.state}
-                                className={styles.inputFieldRow}
+                                className={`${styles.inputFieldRow} ${formik.errors.state ? styles.errorInput : ""}`}
                             >
                                 <option value="">Select your state</option>
                                 <option value="TH">Thuringia</option>
@@ -118,9 +121,9 @@ export default function ShipmentInformation() {
                                 placeholder="Enter your ZIP code"
                                 onChange={formik.handleChange}
                                 value={formik.values.zip}
-                                className={styles.inputFieldRow}
+                                className={`${styles.inputFieldRow} ${formik.errors.zip ? styles.errorInput : ""}`}
                             />
-                            {formik.errors.zip && <div className={styles.erros}>{formik.errors.zip}</div>}
+                            {formik.errors.zip && <div className={styles.errors}>{formik.errors.zip}</div>}
                         </div>
                     </div>
                 </div>
