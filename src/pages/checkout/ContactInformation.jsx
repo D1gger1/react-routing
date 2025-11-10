@@ -3,10 +3,13 @@ import { useFormik } from "formik";
 import { useNavigate } from "react-router-dom";
 import * as Yup from "yup";
 import Breadcrumb from "../../components/Breadcrumb";
+import { useCheckoutStore } from "../../store/chekoutStore";
 import styles from "./ContactInformation.module.css";
 
 export default function ContactInformation() {
   const navigate = useNavigate();
+
+  const setCustomerInfo = useCheckoutStore((state) => state.setCustomerInfo);
 
   const validationSchema = Yup.object({
     firstName: Yup.string().required("Required"),
@@ -30,6 +33,7 @@ export default function ContactInformation() {
     validationSchema,
     onSubmit: (values) => {
       console.log("Contact Information", values);
+      setCustomerInfo(values);
       navigate("/checkout/ShipmentInformation");
     },
   });

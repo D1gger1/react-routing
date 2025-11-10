@@ -2,6 +2,7 @@ import React from "react";
 import { useCartStore } from "../../store/cartStore";
 import { useNavigate } from "react-router-dom";
 import Breadcrumb from "../../components/Breadcrumb";
+import { useCheckoutStore } from "../../store/chekoutStore";
 import styles from './Cart.module.css';
 import deleteImg from '../../assets/deleteImg.png';
 
@@ -10,6 +11,7 @@ export default function Cart() {
   const increaseQuantity = useCartStore((state) => state.increaseQuantity);
   const decreaseQuantity = useCartStore((state) => state.decreaseQuantity);
   const removeFromCart = useCartStore((state) => state.removeFromCart);
+  const setCart = useCheckoutStore((state) => state.setCart)
 
   const totalPrice = cartItems.reduce(
     (sum, item) => sum + item.price * item.quantity,
@@ -24,6 +26,7 @@ export default function Cart() {
   const navigate = useNavigate();
 
   const handleNextStep = () => {
+    setCart(cartItems);
     navigate('/checkout/ContactInformation');
   }
 

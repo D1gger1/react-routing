@@ -3,10 +3,13 @@ import Breadcrumb from "../../components/Breadcrumb";
 import { useFormik } from "formik";
 import * as Yup from "yup"
 import { useNavigate } from "react-router-dom";
+import { useCheckoutStore } from "../../store/chekoutStore";
 import styles from './ShipmentInformation.module.css'
 
 export default function ShipmentInformation() {
     const navigate = useNavigate();
+
+    const setShipmentInfo = useCheckoutStore((state) => state.setShipmentInfo);
 
     const formik = useFormik({
         initialValues: {
@@ -19,7 +22,7 @@ export default function ShipmentInformation() {
         },
         validationSchema: Yup.object({
             address: Yup.string().required("Required"),
-            apartament: Yup.string(),
+            apartment: Yup.string(),
             city: Yup.string().required("Required"),
             country: Yup.string().required("Required"),
             state: Yup.string().required("Required"),
@@ -27,7 +30,8 @@ export default function ShipmentInformation() {
         }),
         onSubmit: (values) => {
             console.log('Shipment Information', values);
-            navigate("/checkout/FinallOrder");
+            setShipmentInfo(values);
+            navigate("/checkout/FinalOrder");
         },
     });
 
@@ -86,10 +90,10 @@ export default function ShipmentInformation() {
                                 className={`${styles.inputFieldRow} ${formik.errors.country ? styles.errorInput : ""}`}
                             >
                                 <option value="">Select your country/region</option>
-                                <option value="DE">Germany</option>
-                                <option value="US">United States</option>
-                                <option value="FR">France</option>
-                                <option value="IT">Italy</option>
+                                <option value="Germany">Germany</option>
+                                <option value="United States">United States</option>
+                                <option value="France">France</option>
+                                <option value="Italy">Italy</option>
                             </select>
                             {formik.errors.country && <div className={styles.errors}>{formik.errors.country}</div>}
 
@@ -104,11 +108,11 @@ export default function ShipmentInformation() {
                                 className={`${styles.inputFieldRow} ${formik.errors.state ? styles.errorInput : ""}`}
                             >
                                 <option value="">Select your state</option>
-                                <option value="TH">Thuringia</option>
-                                <option value="BY">Bavaria</option>
-                                <option value="BE">Berlin</option>
-                                <option value="NRW">North Rhine-Westphalia</option>
-                                <option value="BW">Baden-Württemberg</option>
+                                <option value="Thuringia">Thuringia</option>
+                                <option value="Bavaria">Bavaria</option>
+                                <option value="Berlin">Berlin</option>
+                                <option value="North Rhine-Westphalia">North Rhine-Westphalia</option>
+                                <option value="Baden-Württemberg">Baden-Württemberg</option>
                             </select>
                             {formik.errors.state && <div className={styles.errors}>{formik.errors.state}</div>}
                         </div>

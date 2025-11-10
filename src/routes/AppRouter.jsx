@@ -9,7 +9,7 @@ import Home from '../pages/Home'
 import Cart from '../pages/checkout/Cart'
 import ContactInformation from '../pages/checkout/ContactInformation'
 import ShipmentInformation from '../pages/checkout/ShipmentInformation'
-import FinallOrder from '../pages/FinnalOrder'
+import FinalOrder from '../pages/FinalOrder'
 
 export default function AppRouter() {
     return (
@@ -22,7 +22,7 @@ export default function AppRouter() {
             {/*Multi-step form registration */}
             <Route path="/checkout/ContactInformation" element={<ContactInformation />} />
             <Route path="/checkout/ShipmentInformation" element={<ShipmentInformation />} />
-            <Route path="/checkout/FinallOrder" element={<FinallOrder />} />
+            <Route path="/checkout/FinalOrder" element={<FinalOrder />} />
 
             {/*NotFoundPage*/}
             <Route path="*" element={<Navigate to='/' />} />

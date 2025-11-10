@@ -1,0 +1,234 @@
+.container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 10px auto;
+    padding: 0 16px;
+    box-sizing: border-box;
+    font-family: Inter, ;
+
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.item {
+    list-style-type: none;
+}
+
+.containerInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.thumbnail {
+    width: 100px;
+    height: 100px;
+}
+
+.titleImage {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(180deg, #00AE1C 0%, #F2F5F7 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.checkMark {
+    width: 33px;
+    height: 25px;
+}
+
+.form {
+    width: 100%;
+    max-width: 900px;
+    background: #ffffff;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(16, 24, 40, 0.06);
+    margin: 24px 0;
+    box-sizing: border-box;
+}
+
+
+.titleImage {
+    margin: 0 auto 12px auto;
+}
+
+.title {
+    margin: 8px 0 6px 0;
+    font-size: 32px;
+    color: rgba(36, 53, 115, 1);
+    font-weight: 400;
+}
+
+.subtitle {
+    margin: 0 0 8px 0;
+    color: rgba(36, 53, 115, 1);
+    font-size: 16px;
+}
+
+.orderId {
+    color: rgba(36, 53, 115, 1);
+    font-size: 16px;
+}
+
+.orderDate {
+    margin: 5px 45px;
+    color: rgba(115, 115, 115, 1);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.containerInfo {
+    display: flex;
+    flex-direction: row;
+    gap: 18px;
+    margin: 20px 0;
+}
+
+.sectionContact,
+.sectionShip {
+    background: #ffffff;
+    padding: 7px 16px 5px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
+    flex: 1 1 0;
+}
+
+.sectionContact h2,
+.sectionShip h2 {
+    font-size: 16px;
+    margin: 0 0 8px 0;
+    color: rgba(36, 53, 115, 1);
+    display: flex;
+    align-items: center;
+}
+
+.shipImg,
+.contactImg,
+.infoImg {
+    margin-right: 8px;
+}
+
+.contSum {
+    background: #ffffff;
+    padding: 18px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
+
+}
+
+.sectionOrder {
+    max-height: 294px;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.sectionOrder::-webkit-scrollbar {
+    width: 6px;
+}
+
+.sectionOrder::-webkit-scrollbar-thumb {
+    background-color: rgba(54, 54, 54, 0.6);
+    border-radius: 4px;
+}
+
+.infoImg {
+    position: relative;
+    top: 2px;
+}
+
+.titleSum {
+    font-size: 16px;
+    font-weight: 600;
+    color: rgba(36, 53, 115, 1);
+}
+
+.itemList {
+    list-style: none;
+    padding: 0;
+    margin: 8px 0 0 0;
+
+}
+
+.item {
+    display: flex;
+    gap: 12px;
+    padding: 12px 6px;
+    align-items: center;
+    border-bottom: 1px solid rgba(200, 200, 200, 1);
+}
+
+
+.thumbnail {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+}
+
+.orderTitle {
+    font-weight: 400;
+}
+
+.contTxt{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.item .details {
+    flex: 1 1 auto;
+}
+
+.sectionPrice {
+    display: flex;
+    flex-direction: column;
+    margin-top: 14px;
+    max-width: 420px;
+    font-size: 20px;
+    
+}
+
+.priceRow {
+  display: flex;
+  justify-content: space-between; 
+  padding: 6px 0;
+  color: #1f2937;
+}
+
+.total {
+    font-size: 20px;
+}
+
+.actions {
+    margin-top: 20px;
+}
+
+.button {
+    display: inline-block;
+    height: 40px;
+    padding: 0 16px;
+    border-radius: 8px;
+    background-color: rgba(0, 174, 28, 1);
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.button:hover{
+    border: 1px solid rgba(92, 225, 113, 1);
+}
+
+.button:active{
+    background-color: rgba(12, 213, 43, 1);
+}
+
