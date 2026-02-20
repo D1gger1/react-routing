@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import Breadcrumb from "../../components/Breadcrumb";
 import { useCheckoutStore } from "../../store/chekoutStore";
 import styles from './Cart.module.css';
-import deleteImg from '../../assets/deleteImg.png';
+import deleteImg from '../../assets/deleteimg.png';
 
 export default function Cart() {
   const cartItems = useCartStore((state) => state.cartItems);
