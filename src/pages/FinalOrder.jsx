@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import checkMark from "../assets/checkMark.png";
 import contactImg from "../assets/contactImg.png";
 import shipImg from "../assets/ShipImg.png";
-import infoImg from "../assets/infoImg.png";
+import infoImg from "../assets/infoimg.png";
 import styles from "./FinalOrder.module.css";
 
 export default function FinalOrder() {
