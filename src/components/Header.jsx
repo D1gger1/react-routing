@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import { useCartStore } from "../store/cartStore";
 import styles from './Header.module.css';
 import cartLogo from '../assets/cart.png';
-import headerLogoLeft from '../assets/headerLeft.png';
-import headerLogoRight from '../assets/headerRight.png';
+import headerLogoLeft from '../assets/headerleft.png';
+import headerLogoRight from '../assets/headerright.png';
 
 export const Header = () => {
     const cartItems = useCartStore((state) => state.cartItems);
