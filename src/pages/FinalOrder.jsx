@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import { useCheckoutStore } from "../store/chekoutStore";
 import { useCartStore } from "../store/cartStore";
 import { useNavigate } from "react-router-dom";
-import checkMark from "../assets/checkMark.png";
+import checkMark from "../assets/checkmark.png";
 import contactImg from "../assets/contactimg.png";
-import shipImg from "../assets/ShipImg.png";
+import shipImg from "../assets/shipimg.png";
 import infoImg from "../assets/infoimg.png";
 import styles from "./FinalOrder.module.css";
 
