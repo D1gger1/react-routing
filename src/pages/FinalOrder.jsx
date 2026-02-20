@@ -3,7 +3,7 @@ import { useCheckoutStore } from "../store/chekoutStore";
 import { useCartStore } from "../store/cartStore";
 import { useNavigate } from "react-router-dom";
 import checkMark from "../assets/checkMark.png";
-import contactImg from "../assets/ContactImg.png";
+import contactImg from "../assets/contactImg.png";
 import shipImg from "../assets/ShipImg.png";
 import infoImg from "../assets/infoImg.png";
 import styles from "./FinalOrder.module.css";
